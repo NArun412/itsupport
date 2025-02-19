@@ -1,0 +1,31 @@
+https://mypils-tst.berkleyls.com/
+
+test9791@mailinator.com
+C0nn3ct@123
+
+
+jaredishelpful@tutanota.com
+internetastrology@tutanota.com
+internetastrology@tutanota.com
+
+I am not familier with application side configuration so I send message to 
+Raj regarding this. I will let you know once i receved an acknowledgement from him.
+
+10.30 to 11.00 Application Certificate install in TEST Environment(For trust between ADFS and the Application)
+https://bnetportal.berkleynet.com/wps/portal/berkleynet/home
+13.00
+12.00
+ACL-ENV-ENV_Web_Applications_DocumentSearch_PRD_SU_MFA
+
+https://berkley.webex.com/meet/dmahendran
+
+$From = "mother-of-dragons@houseoftargaryen.net"
+$To = "jon-snow@winterfell.com", "jorah-mormont@night.watch”
+$Cc = "tyrion-lannister@westerlands.com"
+$Attachment = "C:\Temp\Drogon.jpg"
+$Subject = "Photos of Drogon"
+$Body = "<h2>Guys, look at these pics of Drogon!</h2><br><br>"
+$Body += “He is so cute!”
+$SMTPServer = "smtp.mailtrap.io"
+$SMTPPort = "587"
+Send-MailMessage -From $From -to $To -Cc $Cc -Subject $Subject -Body $Body -BodyAsHtml -SmtpServer $SMTPServer -Port $SMTPPort -UseSsl -Credential (Get-Credential) -Attachments $Attachment
