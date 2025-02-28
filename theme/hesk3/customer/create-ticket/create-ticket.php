@@ -158,6 +158,30 @@ require_once(TEMPLATE_PATH . 'customer/util/attachments.php');
                             </div>
                         <?php endif; ?>
                     </section>
+                    <?php if ($hesk_settings['issue_category']): ?>
+                        <section class="param">
+                            <span class="label required"><?php echo $hesklang['issue_type']; ?>:</span>
+                            <div class="dropdown-select center out-close issue_type">
+                                <select name="issue_type">
+                                    <?php if ($hesk_settings['select_pri']): ?>
+                                        <option value=""><?php echo $hesklang['select']; ?></option>
+                                    <?php endif; ?>
+                                    <option value="network_issue" <?php if(isset($_SESSION['c_issue_type']) && $_SESSION['c_issue_type']=='low') {echo 'selected';} ?>>
+                                        <?php echo $hesklang['network_issue']; ?>
+                                    </option>
+                                    <option value="system_issue" <?php if(isset($_SESSION['c_issue_type']) && $_SESSION['c_issue_type']=='medium') {echo 'selected';} ?>>
+                                        <?php echo $hesklang['system_issue']; ?>
+                                    </option>
+                                    <option value="accessories_issue" <?php if(isset($_SESSION['c_issue_type']) && $_SESSION['c_issue_type']=='high') {echo 'selected';} ?>>
+                                        <?php echo $hesklang['accessories_issue']; ?>
+                                    </option>
+                                    <option value="software_issue" <?php if(isset($_SESSION['c_issue_type']) && $_SESSION['c_issue_type']=='high') {echo 'selected';} ?>>
+                                        <?php echo $hesklang['software_issue']; ?>
+                                    </option>
+                                </select>
+                            </div>
+                        </section>
+                    <?php endif; ?>
                     <?php if ($hesk_settings['cust_urgency']): ?>
                         <section class="param">
                             <span class="label required"><?php echo $hesklang['priority']; ?>:</span>

@@ -471,6 +471,7 @@ if (count($hesk_error_buffer))
 
     $_SESSION['c_name']     = hesk_POST('name');
     $_SESSION['c_email']    = hesk_POST('email');
+	$_SESSION['c_issue_type'] = hesk_POST('c_issue_type');
     $_SESSION['c_priority'] = hesk_POST('priority');
     $_SESSION['c_subject']  = hesk_POST('subject');
     $_SESSION['c_message']  = hesk_POST('message');
@@ -571,6 +572,7 @@ if ($hesk_settings['email_view_ticket'])
 unset($tmpvar);
 hesk_cleanSessionVars('tmpvar');
 hesk_cleanSessionVars('c_category');
+hesk_cleanSessionVars('c_issue_type');
 hesk_cleanSessionVars('c_priority');
 hesk_cleanSessionVars('c_subject');
 hesk_cleanSessionVars('c_message');

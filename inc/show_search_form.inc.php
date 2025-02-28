@@ -200,7 +200,9 @@ $more2 = empty($_GET['more2']) ? 0 : 1;
                 <div class="search-options">
                     <div class="radio-list">
                         <?php
+                        array_unshift($hesk_settings['ticket_list'], 'issue_type');
                         array_unshift($hesk_settings['ticket_list'], 'priority');
+                        $hesk_settings['possible_ticket_list']['issue_type'] = $hesklang['issue_type'];
                         $hesk_settings['possible_ticket_list']['priority'] = $hesklang['priority'];
 
                         foreach ($hesk_settings['ticket_list'] as $key):

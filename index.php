@@ -118,6 +118,25 @@ function print_add_ticket()
         }
 	}
 
+    // Issue Type
+	if ( isset($_REQUEST['issue_type']) )
+	{
+        switch ($_REQUEST['issue_type'])
+        {
+            case 1:
+                $_SESSION['c_issue_type'] = 'network_issue';
+                break;
+            case 2:
+                $_SESSION['c_issue_type'] = 'system_issue';
+                break;
+            case 3:
+                $_SESSION['c_issue_type'] = 'accessories_issue';
+                break;
+            default:
+                $_SESSION['c_issue_type'] = 'software_issue';
+        }
+	}
+
 	// Subject
 	if ( isset($_REQUEST['subject']) )
 	{
